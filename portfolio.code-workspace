@@ -5,9 +5,12 @@
 	},
 	{
 		"path": "../../../../../../Downloads/variable_demo_project_c43f3e09e4"
+	},
+	{
+		"path": "../../../../../../Downloads/css-collection"
 	}
 ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "portfolio"
+    "liveServer.settings.multiRootWorkspaceName": "css-collection"
   }
 }
