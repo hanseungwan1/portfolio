@@ -132,6 +132,16 @@ padding:16px;
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
 }
+
+.navbar__toggle-btn{
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url('./imgs/home-background.png') center/cover no-repeat;
@@ -439,3 +449,40 @@ color: var(--color-light-grey);
   color: var(--color-yellow);
   transition: all var(--anmimation-duration) ease-in;
 }
+/*  For below 769px screen width */
+@media screen and (max-width:768px){
+.navbar__toggle-btn{
+  display: block;
+}
+#navbar {
+  flex-direction: column;
+  /* 위에서 아래로 나오게 */
+  align-items: flex-start;
+}
+.navbar__menu{
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.about__majors{
+    flex-direction: column;
+}
+
+.major{
+  margin-bottom: 38px;
+}
+.skillset{
+  flex-direction: column;
+}
+
+.project{
+  flex-grow: 1;
+}
+.testimonial__avatar{
+  width: 80px;
+  height: 80px;
+}
+}
+/* 미디어쿼리에서는 바뀌는 것의 최소한만 넣어라 */
