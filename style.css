@@ -137,7 +137,6 @@ padding:16px;
   background: url('./imgs/home-background.png') center/cover no-repeat;
   padding: 40px;
   text-align: center;
-
 }
 .home__avatar{
   width: 250px;
@@ -165,9 +164,12 @@ padding:16px;
   padding:50px;
   text-align:center;
   /* 가운데 정렬 */
-  max-width:1200px;
   margin: auto;
   /* 마진을 양쪽에 골고루 분배 */
+}
+.section__container{
+  max-width:1200px;
+  margin:auto;
 }
 /* About */
 .about__majors{
@@ -222,4 +224,57 @@ padding:16px;
 }
 .job__period{
   font-size: var(--font-micro);
+}
+
+/* Skill */
+
+#skills {
+  background-color: var(--color-yellow);
+}
+.skillset{
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin:20px 0 ;
+}
+.skillset__title{
+  color: var(--color-white);
+}
+.skillset__left{
+flex-basis: 60%;
+background-color: var(--color-dark-grey);
+padding: 20px 40px;
+}
+.skill{
+  margin-bottom: 32px;
+}
+
+.skill_description{
+  display: flex;
+  justify-content: space-between;
+  /* 쫙늘려야하니까 비트윈 ㅋㅋ  */
+}
+.skill__bar{
+  wifth:100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+.skill__value{
+  height: 3px;
+  background-color: var(--color-orange);
+}
+.skillset__right{
+  flex-basis: 40%;
+}
+.tools{
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc{
+  padding: 20px;
+}
+.tools__list,
+.etc__list{
+  padding: 0;
 }
