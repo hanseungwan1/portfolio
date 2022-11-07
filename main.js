@@ -5,7 +5,6 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
     if (window.scrollY > navbarHeight){
     navbar.classList.add('navbar--dark');
-    console.log('ADA');
 } else {
     navbar.classList.remove('navbar--dark');
 }
@@ -14,19 +13,25 @@ document.addEventListener('scroll',()=>{
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu')
 navbarMenu.addEventListener('click',(event)=>{
-    scrollIng(event);
-});
-const contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click',(event)=>{
-    scrollIng(event);
-})
-function scrollIng(event){
     const target = event.target;
     const link = target.dataset.link;
     if (link==null){
         return;
     }
-    const scrollTo = document.querySelector(link);
+    scrollIng(link);
+});
+const contactMe = document.querySelector('.home__contact');
+contactMe.addEventListener('click',()=>{
+    scrollIng('#contact');
+})
+
+function scrollIng(selection){
+    const scrollTo = document.querySelector(selection);
     scrollTo.scrollIntoView({behavior : 'smooth'});
-    console.log(event.target.dataset.link);
 }
+// home
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    home.style.opacity= 1-(window.scrollY/homeHeight);
+});
