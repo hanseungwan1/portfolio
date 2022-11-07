@@ -98,15 +98,23 @@
 
 /* Navbar */
 #navbar{
+  position: fixed;
   display: flex;
+  width: 100%;
 /* flex box로해서 양쪽에 나올수 있도록 */
 justify-content: space-between;
 /* 양쪽사이 벌어지게함 */
-background-color: var(--color-pink);
 align-items: center;
 /* 수직정렬 */
 color: var(--color-white);
-padding:16px;
+padding: 18px;
+background-color: transparent;
+transition: all var(--anmimation-duration) ease-in-out;
+z-index: 1;
+}
+#navbar.navbar--dark {
+  background-color:#288f09;
+  padding: 8px;
 }
 
 .navbar__menu{
@@ -117,6 +125,10 @@ padding:16px;
   font-weight: var(--weight-semi-bold);
   /* 볼드옵션 */
 }
+.navbar__logo img{
+  width: 45px;
+}
+
 .navbar__menu__item{
   padding:8px 12px;
   margin: 0 4px;
@@ -146,6 +158,7 @@ padding:16px;
 #home {
   background: url('./imgs/home-background.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar{
@@ -187,7 +200,8 @@ padding:16px;
   /* 이거하면 나란히 정렬됨 ㅋㅋ(블럭도) */
   justify-content: space-between;
   /* 이거해야 창 늘리면 알아서 따라옴 */
-    margin: 80px 0;
+    margin: 80px 0 140px 0;
+
 }
 
 .major__icon{
@@ -234,6 +248,11 @@ padding:16px;
 }
 .job__period{
   font-size: var(--font-micro);
+}
+.job__logo {
+  margin: 20px;
+  width: 300px;
+  height: 50px;
 }
 
 /* Skill */
@@ -366,6 +385,7 @@ padding: 20px 40px;
   opacity: 0;
   transform:translateY(10px);
   transition:  all var(--anmimation-duration) ease-in;
+  transform: var(--color-black);
 }
 .project:hover .project__description{
   opacity: 0.8;
@@ -399,6 +419,9 @@ padding: 20px 40px;
   display: flex;
   margin:32px 0;
 }
+.testimonial.a{
+  justify-content: right;
+}
 
 .testimonial__avatar{
   width:150px;
@@ -426,7 +449,7 @@ color: var(--color-light-grey);
 
 /* Contact */
 #contact {
-  background-color: var(--color-dark-pink);
+  background-color: #288f09;
 
 }
 
