@@ -513,3 +513,23 @@ color: var(--color-light-grey);
 }
 }
 /* 미디어쿼리에서는 바뀌는 것의 최소한만 넣어라 */
+
+.up__btn{
+  position: fixed;
+  left: 1780px;
+  top: 850px;
+  background-color: yellow;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  color: green;
+  font-size: 50px;
+  opacity: 0;
+  pointer-events: none;
+  /* 안보일때 이벤트 발생 X */
+  transition: opacity 400ms ease-in;
+}
+.up__btn.visible{
+  opacity: 1;
+  pointer-events: auto;
+}

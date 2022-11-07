@@ -35,3 +35,17 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
     home.style.opacity= 1-(window.scrollY/homeHeight);
 });
+
+const upbtn=document.querySelector('.up__btn');
+upbtn.addEventListener('click',()=>{
+    scrollIng('#home');
+})
+
+document.addEventListener('scroll',()=>{
+    console.log(homeHeight);
+    console.log(window.scrollY);
+    if(homeHeight/2 <window.scrollY){
+        upbtn.classList.add('visible');
+    } else  upbtn.classList.remove('visible');
+    
+});
