@@ -42,10 +42,32 @@ upbtn.addEventListener('click',()=>{
 })
 
 document.addEventListener('scroll',()=>{
-    console.log(homeHeight);
-    console.log(window.scrollY);
     if(homeHeight/2 <window.scrollY){
         upbtn.classList.add('visible');
     } else  upbtn.classList.remove('visible');
     
+});
+
+const workBnt = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBnt.addEventListener('click',(event)=>{
+    const link = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if(link == null) {
+        return ;
+    }
+    projectContainer.classList.add('anim-out');
+
+    setTimeout(() => {
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if(link ==='*' || link === project.dataset.type){
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    },300);
 });
