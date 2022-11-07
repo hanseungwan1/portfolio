@@ -57,8 +57,15 @@ workBnt.addEventListener('click',(event)=>{
     if(link == null) {
         return ;
     }
-    projectContainer.classList.add('anim-out');
 
+// Remove selection
+const active = document.querySelector('.category__btn.active');
+active.classList.remove('active');
+const target = event.target.nodeName === 'BUTTON' ? event.target :
+                    event.target.parentNode;
+target.classList.add('active');
+
+    projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => {
             console.log(project.dataset.type);
