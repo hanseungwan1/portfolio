@@ -134,10 +134,13 @@ z-index: 1;
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
-  border: 1px solid transparent;
+
   /* 커서올리면 손가락모양 */
 }
 
+.navbar__menu__item.active{
+  border: 1px solid white;
+}
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
@@ -575,7 +578,7 @@ color: var(--color-light-grey);
   width: 150px;
   height: 30px;
 }
-.up__btn{
+.arrow-up{
   width: 50px;
   height: 50px;
   font-size: 30px;
@@ -586,7 +589,7 @@ color: var(--color-light-grey);
 }
 /* 미디어쿼리에서는 바뀌는 것의 최소한만 넣어라 */
 
-.up__btn{
+.arrow-up{
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -602,7 +605,7 @@ color: var(--color-light-grey);
   transition: opacity 400ms ease-in;
 }
 
-.up__btn.visible {
+.arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
 }
